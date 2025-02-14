@@ -164,40 +164,23 @@ body, html {
 	
 }
 
-@media (max-width: 768px) { /* Adjustments for tablets and below */
-    .frame {
-        width: 90%;
-        height: auto; /* Adjust height based on content */
-        margin: 10% auto;
-        border-radius: 0 0 20px 20px;
-    }
-
-    .message {
-        width: 90%; /* Smaller message box */
-        min-height: 200px; /* Adjusted height */
-    }
-
-    #button_open_envelope {
-        width: 50%;
-        top: 10px; /* Adjusted positioning */
-        left: 25%; /* Center based on the reduced width */
-        font-size: 14px; /* Smaller text on mobile */
-    }
-
-    .left, .right, .top, .bottom {
-        border-width: 150px; /* Smaller envelope parts */
-    }
-
-    .top {
-        border-top-width: 100px;
-    }
-
-    .vertically-oriented-pull {
-        animation: adjust_animation_speed 2s ease-in-out forwards; /* Faster animation for mobile */
-    }
-}
-
-@keyframes adjust_animation_speed {
-    0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(-150px) rotate(-90deg); } /* Less translateY for smaller screens */
-}
+@media only screen and (max-width: 767px) {
+	.vertically-oriented-pull {
+	  animation: message_animation_mobile 5s ease-in-out forwards;
+	}
+  
+	@keyframes message_animation_mobile {
+	  0% {
+		  transform: translateY(0px) rotate(0deg);
+	  }
+	  50% {
+		  transform: translateY(-425px) rotate(0deg);
+	  }
+	  80% {
+		  transform: translateY(-350px) rotate(-90deg);
+	  }
+	  100% {
+		  transform: translateY(-50px) rotate(-90deg) scale(1.5); /* Increased scale value */
+	  }
+	}
+  }
