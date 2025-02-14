@@ -132,7 +132,7 @@ body, html {
 	transform:rotateX(180deg);
 	transition:transform 1.5s,border 1.5s,z-index 1.5s ease-in-out;
 	border-top: 200px solid #282e33;
-	z-index: 270;
+	z-index: 265;
 }
 
 
@@ -140,7 +140,7 @@ body, html {
     animation: message_animation 5s ease-in-out forwards; /* Smooth prolonged animation */
     transform-origin: center center;  /* Central pivot for rotation to ensure symmetrical rotation */
     position: relative;  /* Make sure it's positioned relative to its normal position or absolute if needed */
-    z-index: 1000;  /* High z-index to ensure it is over the envelope */
+    z-index: 800;  /* High z-index to ensure it is over the envelope */
 }
 
 @keyframes message_animation {
@@ -174,13 +174,13 @@ body, html {
 		  transform: translateY(0px) rotate(0deg);
 	  }
 	  50% {
-		  transform: translateY(-425px) rotate(0deg);
+		  transform: translateY(-40vh) rotate(0deg);  /* adjusted to use viewport height */
 	  }
 	  80% {
-		  transform: translateY(-350px) rotate(-90deg);
+		  transform: translateY(-30vh) rotate(-90deg);  /* adjusted to use viewport height */
 	  }
 	  100% {
-		  transform: translateY(-50px) rotate(-90deg) scale(1.5); /* Increased scale value */
+		  transform: translateY(-10vh) rotate(-90deg) scale(1.7);  /* reduced scale and adjusted translation */
 	  }
 	}
   }
