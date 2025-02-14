@@ -95,17 +95,17 @@ body, html {
 
 .left,.right,.top{width: 0;	height: 0; position:absolute; top:0; z-index: 310;}
 .left{	
-	border-left: 300px solid #202122;
+	border-left: 360px solid #202122;
 	border-top: 180px solid transparent;
 	border-bottom: 150px solid transparent;
 	border-top-left-radius: 30px;
 }
 .right{	
-	border-right: 300px solid #202122;
+	border-right: 360px solid #202122;
+	border-left: 240px solid #202122;
 	border-top: 180px solid transparent;
-	border-bottom: 150px solid transparent;;
-	left:300px;	border-top-left-radius: 30px;  
-    border-top-right-radius: 30px; 
+	border-bottom: 150px solid transparent;
+	border-top-right-radius: 30px;
 }
 .top{	
 	border-right: 300px solid transparent;
@@ -121,7 +121,7 @@ body, html {
 	width: 600px;
 	height: 280px;
 	position: absolute;
-	background: #24282d;
+	background: #373a3e;
 	top: 180px;
 	border-radius:0 0 30px 30px;
 	z-index: 310; 
@@ -180,7 +180,7 @@ body, html {
 		  transform: translateY(-30vh) rotate(-90deg);  /* adjusted to use viewport height */
 	  }
 	  100% {
-		  transform: translateY(-10vh) rotate(-90deg) scale(1.7);  /* reduced scale and adjusted translation */
+		  transform: translateY(-10vh) rotate(-90deg) scale(1.5);  /* reduced scale and adjusted translation */
 	  }
 	}
   }
