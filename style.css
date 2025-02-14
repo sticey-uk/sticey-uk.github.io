@@ -74,7 +74,7 @@ body, html {
 	margin: 0 auto;
 	top: 20px;
 	box-shadow: 0 0 1px 1px #333;
-	transition-delay:2s;
+	transition-delay:3s;
 	z-index: 300;
 	overflow: hidden;
 }
