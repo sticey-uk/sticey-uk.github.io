@@ -74,7 +74,7 @@ body, html {
 	margin: 0 auto;
 	top: 20px;
 	box-shadow: 0 0 1px 1px #333;
-	transition-delay:3s;
+	transition-delay:2s;
 	z-index: 300;
 	overflow: hidden;
 }
@@ -117,14 +117,14 @@ body, html {
 }
 
 .top {
-    border-right: 300px solid transparent;
-    border-top: 200px solid #373a3e;
-    border-left: 300px solid transparent;
-    transform-origin: top;
-    transform: rotateX(0deg);
-    border-top-left-radius: 30px;  
-    border-top-right-radius: 30px;  
-    clip-path: polygon(0 0, 100% 0%, 50% 100%); /* Use clip-path to define top flap with a peak */
+	border-right: 300px solid transparent;
+	border-top: 200px solid #373a3e;
+	border-left: 300px solid transparent;
+	transition:transform 1s,border 1s, ease-in-out;
+	transform-origin:top;
+	transform:rotateX(0deg);
+	z-index: 310;
+	border-radius: 30px 30px 30px 30px;
 }
 
 .bottom {
@@ -140,14 +140,14 @@ body, html {
 .open{
 	transform-origin:top;
 	transform:rotateX(180deg);
-	transition:transform 1.5s,border 1.5s,z-index 1.5s ease-in-out;
+	transition:transform 1s,border 1s,z-index 0.9s ease-in-out;
 	border-top: 200px solid #282e33;
 	z-index: 265;
 }
 
 
 .vertically-oriented-pull {
-    animation: message_animation 5s ease-in-out forwards; /* Smooth prolonged animation */
+    animation: message_animation 4s ease-in-out forwards; /* Smooth prolonged animation */
     transform-origin: center center;  /* Central pivot for rotation to ensure symmetrical rotation */
     position: relative;  /* Make sure it's positioned relative to its normal position or absolute if needed */
     z-index: 800;  /* High z-index to ensure it is over the envelope */
