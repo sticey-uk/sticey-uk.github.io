@@ -4,7 +4,7 @@ body, html {
     height: 100%;
     margin: 0px;
     padding: 0px;
-	background-image: url('background.webp');
+	background-image: url('Park-of-Petr-1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -40,7 +40,7 @@ body, html {
 	width: 600px;
 	height: 350px;
 	position: relative;
-	background: #3d4043;
+	background: #2B190F;
 	border-radius:30px 30px 40px 40px; 
 }
 
@@ -54,15 +54,16 @@ body, html {
 	top: 250px;
 	left: 208px;
 	border-radius: 10px;
-	color: #fff;
+	color: #A79155;
+	background: #2A2811;
 	font-size: 26px;
 	padding:15px 0; 
-	border: 2px solid #fff;
+	border: 2px solid #251D10;
     transition: all .3s ease-in-out;
 }
 #button_open_envelope:hover{
-	background: #FFf;
-	color: #262c34;
+	background: #A79155;
+	color: #251D10;
 	transform:scale(1.15);
 	cursor: pointer;
 }
@@ -80,13 +81,8 @@ body, html {
 	overflow: hidden;
 }
 
-.frame .message img {
-	outline: 1px solid #000;
-    border: none;
-}
-
   .frame .message img {
-	background: transparent;
+	
 	width: 100%;
 	height: auto;
 	object-fit: fill;
@@ -112,7 +108,7 @@ body, html {
 }
 
 .left {
-    border-left: 360px solid #202122;
+    border-left: 360px solid #2A2811;
     border-top: 180px solid transparent;
     border-bottom: 150px solid transparent;
     border-top-left-radius: 30px; /* Note: This will not visually affect your actual triangle */
@@ -120,7 +116,7 @@ body, html {
 
 .right {
     border-left: 240px solid transparent;
-    border-right: 360px solid #202122;
+    border-right: 360px solid #2A2811;
     border-top: 180px solid transparent;
     border-bottom: 150px solid transparent;
     border-top-right-radius: 30px; /* Similar note as left */
@@ -128,7 +124,7 @@ body, html {
 
 .top {
 	border-right: 300px solid transparent;
-	border-top: 200px solid #373a3e;
+	border-top: 200px solid #251D10;
 	border-left: 300px solid transparent;
 	transition:transform 1s,border 1s, ease-in-out;
 	transform-origin:top;
@@ -141,7 +137,7 @@ body, html {
     width: 600px;
     height: 280px;
     position: absolute;
-    background: #373a3e;
+    background: #251D10;
     top: 180px;
     border-radius: 0 0 30px 30px;
     z-index: 310; 
@@ -151,7 +147,7 @@ body, html {
 	transform-origin:top;
 	transform:rotateX(180deg);
 	transition:transform 1s,border 1s,z-index 0.9s ease-in-out;
-	border-top: 200px solid #282e33;
+	border-top: 200px solid #2B190F;
 	z-index: 265;
 }
 
