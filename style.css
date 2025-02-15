@@ -11,7 +11,7 @@ body, html {
 	display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    min-height: 40vh;       /* At least the full height of the viewport */
+    min-height: 0vh;       /* At least the full height of the viewport */
     margin: 0;               /* Removing default margin */
 }
 
@@ -69,7 +69,7 @@ body, html {
 }
 .message{
 	position: relative;
-	width: 570px;
+	width: 600px;
 	min-height:350px;
 	background: transparent;
 	transform: translate3d(0,0,0);
@@ -160,11 +160,11 @@ body, html {
 	}
 
     80% {
-        transform: translateY(-350px) rotate(-90deg) scale(0.7); /* End state: moved up and rotated */
+        transform: translateY(-350px) rotate(-90deg) scale(0.8); /* End state: moved up and rotated */
     }
 
 	100% {
-		transform: translateY(-50px) rotate(-90deg) scale(1.3);;
+		transform: translateY(-50px) rotate(-90deg) scale(1.2);;
 	}
 
 	
