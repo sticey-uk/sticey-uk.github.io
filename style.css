@@ -68,22 +68,32 @@ body, html {
 }
 .message{
 	position: relative;
-	width: 580px;
+	width: 570px;
 	min-height:300px;
-	background: #fff;
+	background: transparent;
+	/* transform: translate3d(0,0,0); */
 	margin: 0 auto;
-	top: 20px;
-	box-shadow: 0 0 1px 1px #333;
+	top: 25px;
+	/* box-shadow: 0 0 1px 1px #333; */
 	transition-delay:2s;
 	z-index: 300;
 	overflow: hidden;
 }
 
 .frame .message img {
+	outline: 1px solid #000;
+    border: none;
+}
+
+  .frame .message img {
+	background: transparent;
 	width: 100%;
 	height: auto;
 	object-fit: fill;
-  }
+	transform: translate3d(0,0,0);
+    outline: none;
+	border: 1px solid #000;  
+}
 
 
 .vertically-oriented {
@@ -190,7 +200,7 @@ body, html {
 		  transform: translateY(-30vh) rotate(-90deg);  /* adjusted to use viewport height */
 	  }
 	  100% {
-		  transform: translateY(-10vh) rotate(-90deg) scale(1.2);  /* reduced scale and adjusted translation */
+		  transform: translateY(-10vh) rotate(-90deg) scale(1.5);  /* reduced scale and adjusted translation */
 	  }
 	}
   }
