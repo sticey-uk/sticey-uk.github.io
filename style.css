@@ -83,6 +83,7 @@ body, html {
 	width: 100%;
 	height: auto;
 	object-fit: contain;
+	image-rendering: pixelated;
   }
 
 
@@ -174,7 +175,7 @@ body, html {
 	
 }
 
-@media only screen{
+@media only screen and (max-width: 767px) {
 	.vertically-oriented-pull {
 	  animation: message_animation_mobile 4s ease-in-out forwards;
 	}
@@ -190,7 +191,7 @@ body, html {
 		  transform: translateY(-30vh) rotate(-90deg);  /* adjusted to use viewport height */
 	  }
 	  100% {
-		  transform: translateY(-10vh) rotate(-90deg) scale(1.6);  /* reduced scale and adjusted translation */
+		  transform: translateY(-10vh) rotate(-90deg) scale(1.5);  /* reduced scale and adjusted translation */
 	  }
 	}
   }
