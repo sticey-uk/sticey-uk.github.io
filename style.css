@@ -183,7 +183,7 @@ body, html {
 		  transform: translateY(-40vh) rotate(0deg);  /* adjusted to use viewport height */
 	  }
 	  80% {
-		  transform: translateY(-30vh) rotate(-90deg) scale(0.2);  /* adjusted to use viewport height */
+		  transform: translateY(-30vh) rotate(-90deg) scale(0.8);  /* adjusted to use viewport height */
 	  }
 	  100% {
 		  transform: translateY(-10vh) rotate(-90deg) scale(1.4);  /* reduced scale and adjusted translation */
