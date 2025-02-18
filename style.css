@@ -1,6 +1,6 @@
 body, html {
     font-family: Helvetica, Arial, sans-serif;
-	width: 100%;
+	width: auto;
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -39,7 +39,7 @@ body, html {
 .frame{
 	width: 600px;
 	height: 350px;
-	position: relative;
+	position: absolute;
 	background: #2B190F;
 	border-radius:30px 30px 40px 40px; 
 }
@@ -64,28 +64,32 @@ body, html {
 #button_open_envelope:hover{
 	background: #A79155;
 	color: #2d2314;
-	transform:scale(1.15);
+	transform:scale(1);
 	cursor: pointer;
 }
 .message{
+	
 	position: relative;
 	width: 590px;
-	min-height:350px;
-	background: transparent;
-	transform: translate3d(0,0,0);
+	min-height:360px;
 	margin: 0 auto;
 	top: 25px;
 	transition-delay:2s;
 	z-index: 300;
 	overflow: hidden;
+	margin-left: 2px
 }
 
   .frame .message img {
+	will-change: transform;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translate3d(0,0,0);
+	-webkit-transform: translateZ(0);
+	background: transparent;
 	
 	width: 100%;
 	height: auto;
-	object-fit: fill;
-	transform: translate3d(0,0,0);
 }
 
 
@@ -100,7 +104,7 @@ body, html {
 .left {
     border-left: 360px solid #2A2811;
     border-top: 180px solid transparent;
-    border-bottom: 150px solid transparent;
+    border-bottom: 160px solid transparent;
     border-top-left-radius: 30px; /* Note: This will not visually affect your actual triangle */
 }
 
@@ -108,7 +112,7 @@ body, html {
     border-left: 240px solid transparent;
     border-right: 360px solid #2A2811;
     border-top: 180px solid transparent;
-    border-bottom: 150px solid transparent;
+    border-bottom: 160px solid transparent;
     border-top-right-radius: 30px; /* Similar note as left */
 }
 
@@ -156,15 +160,15 @@ body, html {
 
 
 	50% {
-		transform: translateY(-425px) rotate(0deg);
+		transform: translateY(-445px) rotate(0deg);
 	}
 
     80% {
-        transform: translateY(-350px) rotate(-90deg) scale(0.8); /* End state: moved up and rotated */
+        transform: translateY(-350px) rotate(-90deg) scale(0.9); /* End state: moved up and rotated */
     }
 
 	100% {
-		transform: translateY(-50px) rotate(-90deg) scale(1.5);;
+		transform: translateY(-50px) rotate(-90deg) scale(1.1);;
 	}
 
 	
