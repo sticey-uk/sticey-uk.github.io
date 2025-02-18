@@ -1,132 +1,108 @@
+/* Base styles for the page */
 body, html {
     font-family: Helvetica, Arial, sans-serif;
-	width: auto;
+    width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
-	background-image: url('Park-of-Petr-1.webp');
+    margin: 0;
+    padding: 0;
+    background-image: url('Park-of-Petr-1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-	display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    min-height: 0vh;       /* At least the full height of the viewport */
-    margin: 0;               /* Removing default margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Belarusian language-specific font */
 :lang(be) { 
     font-family: 'Georgia', cursive;
-
-
 }
 
-
-
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
+/* Envelope container */
+.frame {
+    width: 600px;
+    height: 350px;
+    position: relative;
+    background: #2B190F;
+    border-radius: 30px 30px 40px 40px;
 }
 
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+/* Envelope open button */
+#button_open_envelope {
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    z-index: 311;
+    top: 250px;
+    left: 208px;
+    border-radius: 10px;
+    color: #A79155;
+    background: #2A2811;
+    font-size: 26px;
+    padding: 15px 0;
+    border: 2px solid #251D10;
+    transition: all 0.3s ease-in-out;
+}
+#button_open_envelope:hover {
+    background: #A79155;
+    color: #2d2314;
+    transform: scale(1.15);
+    cursor: pointer;
 }
 
-
-.frame{
-	width: 600px;
-	height: 350px;
-	position: absolute;
-	background: #2B190F;
-	border-radius:30px 30px 40px 40px; 
+/* Message container holding the image */
+.message {
+    position: relative;
+    width: 590px;
+    min-height: 350px;
+    background: transparent;
+    margin: 0 auto;
+    top: 25px;
+    z-index: 300;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
 }
 
-
-
-#button_open_envelope{
-	width: 180px;
-	height: 30px;
-	position: absolute;
-	z-index: 311;
-	top: 250px;
-	left: 208px;
-	border-radius: 10px;
-	color: #A79155;
-	background: #2A2811;
-	font-size: 26px;
-	padding:15px 0; 
-	border: 2px solid #251D10;
-    transition: all .3s ease-in-out;
-}
-#button_open_envelope:hover{
-	background: #A79155;
-	color: #2d2314;
-	transform:scale(1);
-	cursor: pointer;
-}
-.message{
-	
-	position: relative;
-	width: 590px;
-	min-height:360px;
-	margin: 0 auto;
-	top: 25px;
-	transition-delay:2s;
-	z-index: 300;
-	overflow: hidden;
-	margin-left: 2px
+/* Image inside the message container */
+.frame .message img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    transform: translate3d(0, 0, 0);
 }
 
-  .frame .message img {
-	will-change: transform;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	transform: translate3d(0,0,0);
-	-webkit-transform: translateZ(0);
-	background: transparent;
-	
-	width: 100%;
-	height: auto;
-}
-
-
-  .left, .right, .top {
+/* Envelope parts */
+.left, .right, .top {
     width: 0;
     height: 0;
     position: absolute;
     top: 0;
     z-index: 310;
 }
-
 .left {
     border-left: 360px solid #2A2811;
     border-top: 180px solid transparent;
-    border-bottom: 160px solid transparent;
-    border-top-left-radius: 30px; /* Note: This will not visually affect your actual triangle */
+    border-bottom: 150px solid transparent;
 }
-
 .right {
     border-left: 240px solid transparent;
     border-right: 360px solid #2A2811;
     border-top: 180px solid transparent;
-    border-bottom: 160px solid transparent;
-    border-top-right-radius: 30px; /* Similar note as left */
+    border-bottom: 150px solid transparent;
 }
-
 .top {
-	border-right: 300px solid transparent;
-	border-top: 200px solid #251D10;
-	border-left: 300px solid transparent;
-	transition:transform 1s,border 1s, ease-in-out;
-	transform-origin:top;
-	transform:rotateX(0deg);
-	z-index: 310;
-	border-radius: 30px 30px 30px 30px;
+    border-right: 300px solid transparent;
+    border-top: 200px solid #251D10;
+    border-left: 300px solid transparent;
+    transition: transform 1s, border 1s ease-in-out;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    z-index: 310;
+    border-radius: 30px;
 }
 
+/* Bottom part of the envelope */
 .bottom {
     width: 600px;
     height: 280px;
@@ -134,43 +110,43 @@ body, html {
     background: #251D10;
     top: 180px;
     border-radius: 0 0 30px 30px;
-    z-index: 310; 
+    z-index: 310;
 }
 
-.open{
-	transform-origin:top;
-	transform:rotateX(180deg);
-	transition:transform 1s,border 1s,z-index 0.9s ease-in-out;
-	border-top: 200px solid #311c11;
-	z-index: 265;
+/* State for when the envelope is open */
+.open {
+    transform-origin: top;
+    transform: rotateX(180deg);
+    transition: transform 1s, border 1s, z-index 0.9s ease-in-out;
+    border-top: 200px solid #311c11;
+    z-index: 265;
 }
 
-
+/* Animation for the message container rotation */
+/* The rotated image starts behind the envelope (z-index: 300) and after 3s, its z-index jumps to 800 */
 .vertically-oriented-pull {
-    animation: message_animation 4s ease-in-out forwards; /* Smooth prolonged animation */
-    transform-origin: center center;  /* Central pivot for rotation to ensure symmetrical rotation */
-    position: absolute;  /* Make sure it's positioned relative to its normal position or absolute if needed */
-    z-index: 800;  /* High z-index to ensure it is over the envelope */
+    animation: message_animation 4s ease-in-out forwards, raiseImage 0s 2s forwards;
+    transform-origin: center;
+    position: absolute;
+    z-index: 300;
 }
 
 @keyframes message_animation {
     0% {
-        transform: translateY(0px) rotate(0deg); /* Starting state: no movement, no rotation */
+        transform: translateY(0) rotate(0);
     }
-
-
-	50% {
-		transform: translateY(-445px) rotate(0deg);
-	}
-
+    50% {
+        transform: translateY(-425px) rotate(0);
+    }
     80% {
-        transform: translateY(-350px) rotate(-90deg) scale(0.9); /* End state: moved up and rotated */
+        transform: translateY(-350px) rotate(-90deg) scale(0.8);
     }
-
-	100% {
-		transform: translateY(-50px) rotate(-90deg) scale(1.1);;
-	}
-
-	
+    100% {
+        transform: translateY(-50px) rotate(-90deg) scale(1.3);
+    }
 }
 
+/* This zero-duration keyframe animation changes z-index after a 3-second delay */
+@keyframes raiseImage {
+    to { z-index: 800; }
+}
